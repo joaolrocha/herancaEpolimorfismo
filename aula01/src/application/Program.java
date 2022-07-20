@@ -23,7 +23,7 @@ public class Program {
         BusinessAccount acc4 = (BusinessAccount)acc2; // downCasting manual
         acc4.loan(100.0);
 
-        // BusinessAccount acc5 = (BusinessAccount) acc3;
+        //BusinessAccount acc5 = (BusinessAccount) acc3;
         if (acc3 instanceof BusinessAccount) {
             BusinessAccount acc5 = (BusinessAccount) acc3;
             acc5.loan(200.0);
@@ -36,5 +36,16 @@ public class Program {
             System.out.println("Update");
         }
 
+        //Testando o método Override na SavingsAccount
+
+        Account acc6 = new SavingsAccount(1110, "Maria", 1000.0, 0.01);
+        acc6.withDraw(200.0);
+        System.out.println(acc6.getBalance());
+
+        //Testando o metodo Override da conta BusinessAccount
+
+        Account acc7 = new BusinessAccount(1200, "Matheus", 1000.0, 500.0);
+        acc7.withDraw(200.0);
+        System.out.println(acc7.getBalance());
     }
 }

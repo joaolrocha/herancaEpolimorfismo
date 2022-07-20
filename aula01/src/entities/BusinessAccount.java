@@ -26,6 +26,10 @@ public class BusinessAccount extends Account{
         if(amount <= loanLimit){
             balance += amount - 10.0;
         }
-
+    }
+    @Override
+    public void withDraw(double amount) {
+        super.withDraw(amount); // Saque normal da classe account
+        balance -= 2.0; // desconto para esse tipo de conta
     }
 }
